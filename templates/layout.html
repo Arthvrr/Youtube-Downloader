@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTubeMP3.org : Youtube Downloader</title>
+  <link rel="stylesheet" href=" {{url_for('static',filename = 'style.css')}} ">
+  <style>
+
+  </style>
+  <script src=" {{url_for('static',filename = 'script.js')}} "></script>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <h1 class="title">YOUTUBEMP3.ORG</h1>
+      <a href="{{ url_for('home') }}" class="link-home-header">Home</a>
+    </header>
+      {% block content %} {% endblock %}
+  </main>
+  <footer class="sticky-footer">
+    <div class="links-footer">
+      <a href="{{ url_for('faq') }}">FAQ</a>
+      <button id="check" class="dark-mode-toggle" onclick="changeStatus()">Change Mode</button>
+      <a href="mailto:arthurlouette12@gmail.com">Contact</a>
+    </div>
+    <p class="text-footer"> © Copyright Arthvr 2022.</p>
+  </footer>
+</body>
+</html>

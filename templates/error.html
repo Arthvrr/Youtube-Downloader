@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="home">
+    <h2 class="heading">Sometimes went wrong, try again.</h2>
+    <img src=" {{url_for('static',filename = 'IMG/error.jpg')}} " alt="error" class="img-error">
+</div>
+    <a href=" {{ url_for('home') }} " class="back-button">Return to Home</a>
+{% endblock content %} 

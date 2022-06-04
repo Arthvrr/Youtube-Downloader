@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="home">
+    <h2 class="heading">YTBMP3.ORG - Frequently Asked Questions (FAQ)</h2>
+    <div class="FAQ">
+        <p class="FAQ-text">
+            <u>How do you download a video ?</u> As explained in the menu tutorial, you first need to copy the <br>
+               URL of the video you want to download from YouTube. Once this is done, you go to the site, paste <br>
+               the URL into the search bar, and then you can click on "Convert". You will then be taken to another <br>
+               page if everything goes according to plan. You have to choose what resolution you want to have if you <br>
+               want a .mp4 file, if you are downloading a .mp3 video just tick a box, this will not influence the final <br>
+               result. Then you choose the format, .mp3 or .mp4. And when you are ready, you can click on download, <br>
+               you will find the downloaded file in your "Downloads" folder in no time. You're welcome ;)) <br>
+        </p>
+        <p class="FAQ-text">
+            <u>What was the site designed with ?</u> The site was designed with the basic web programming languages: <br>
+               HTML, CSS, some Javascript, but it was also partly designed with the Python framework Flask. <br>
+        </p>
+        <p class="FAQ-text">
+            <u>My thumbnail is not displayed, is this normal ?</u> Yes, it's possible that the thumbnail display may <br>
+               have some bugs, but no problem since the upload works perfectly :)) <br>
+        </p>
+        <p class="FAQ-text">
+            <u>Why do I have to select a pixel resolution when I want to download in mp3 ?</u> Don't worry, what I choose <br>
+               in the resolution part to download an mp3 file will not influence anything! For ease of use I have left it <br>
+               visible during any type of download, but it doesn't change anything. So don't worry, choose randomly, <br>
+               no problem! <br>
+        </p>
+        <p class="FAQ-text">
+            <u>How to change the theme ?</u> You just have to click on the "Change Theme" button at the bottom of the site. <br>
+               Your eyes will thank you !
+        </p>
+        <p class="FAQ-text"> If you have any questions, don't hesitate to contact me in the "Contact" part of the website footer</p>
+        <a href=" {{ url_for('home') }} " class="back-button">Return to Home</a>
+    </div>
+</div>
+
+{% endblock content %} 

@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="home">
+        <h2 class="heading">Please enter the URL of the video to be downloaded</h2>
+    <form method="POST" class="form">
+        <input type="text" placeholder="Enter the Youtube URL" name="url" class="URL-input">
+        <button type="submit" class="convert-button">Convert</button>
+    </form>
+    <img src=" {{url_for('static',filename = 'IMG/tuto.png')}} " alt="tuto" class="img-tuto">
+    </div>
+
+{% endblock content %} 

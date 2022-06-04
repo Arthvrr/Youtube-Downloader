@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="home">
+    <h2 class="heading">Download Page</h2>
+    <h2 class="video-title">{{url.title}}</h2>
+    <img src="{{ thumbnail }}" alt="Miniature" id="thumbnail" class="thumbnail">
+    <div class="custom-select">
+        <form action="{{url_for('download_video')}}" method="POST">
+            <select name="itag" class="selective">
+                {% for i in url.streams.filter(progressive=True) %}
+                <option value="{{i.itag}}" class="choose-resolution">{{i.resolution}}</option>
+                {% endfor %}
+            </select>
+            <select name="format" class="selective">
+                <option value="MP3" class="choose-format">MP3</option>
+                <option value="MP4" class="choose-format">MP4</option>
+            </select>
+            <button type="submit" class="convert-button">Download</button>
+        </form> 
+    </div>
+</div>
+
+{% endblock content %} 
